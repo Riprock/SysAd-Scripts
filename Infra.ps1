@@ -23,6 +23,9 @@ Write-Output("Starting VMs")
 .\vmrun.exe -T ws start $winclivmx gui
 .\vmrun.exe -T ws start $winsrvvmx gui
 .\vmrun.exe -T ws start $tuxclivmx gui
+Write-Output("Change settings for networking")
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
 }
 
 Function SetupSrv{
