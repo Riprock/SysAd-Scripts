@@ -48,8 +48,8 @@ Install-ADDSForest `
 -ForestMode "WinThreshold" `
 -InstallDns:$true `
 -LogPath "C:\Windows\NTDS" `
--NoRebootOnCompletion:$false `
 -SysvolPath "C:\Windows\SYSVOL" `
+-NoRebootOnCompletion:$false `
 -Force:$true
 }
 
