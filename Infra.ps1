@@ -53,20 +53,4 @@ Install-ADDSForest `
 -Force:$true
 }
 
-
-Function SetupPF{
-$Keystrokes = @("1","n","em0","em1","y","2","2","192.168.73.254","24"," "," ","n","n"," ")
-	foreach ($key in $Keystrokes){
-		.\vmrun.exe -T ws typeKeystrokesInGuest $gatewayvmx $key
-		}
-#Might write a while loop here to do the setup of PFsense. While through a list of keystroke strings for configuration. Might Make work easier. WIll need to test
-}
-Function SetupWinCLI{
-
-}
-
-Function SetupTuxCLI{
-
-}
-
 SetupInfra
